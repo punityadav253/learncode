@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let billingAmount = parseInt(prompt("Enter billing amount"));
+        let customerPaidAmount = parseInt(prompt("Enter amount paid by customer"));
+
+        if (customerPaidAmount > billingAmount) {
+            let returnAmount = customerPaidAmount - billingAmount;
+            document.write("Please return extra amount to the customer : " + returnAmount);
+
+            let note200 = parseInt(returnAmount / 200);
+            returnAmount = returnAmount % 200;
+
+            let note100 = parseInt(returnAmount / 100);
+            returnAmount = returnAmount % 100;
+
+            let note50 = parseInt(returnAmount / 50);
+            returnAmount = returnAmount % 50;
+
+            let note20 = parseInt(returnAmount / 20);
+            returnAmount = returnAmount % 20;
+
+            let note10 = parseInt(returnAmount / 10);
+            returnAmount = returnAmount % 10;
+
+            let note5 = parseInt(returnAmount / 5);
+            returnAmount = returnAmount % 5;
+
+            let note2 = parseInt(returnAmount / 2);
+            returnAmount = returnAmount % 2;
+
+            let note1 = parseInt(returnAmount / 1);
+            returnAmount = returnAmount % 1;
+
+            if (note200 > 0) {
+                document.write("<br>");
+                document.write("₹200 : " + note200);
+
+            }
+            if (note100 > 0) {
+                document.write("<br>");
+                document.write("₹100 : " + note100);
+            }
+
+            if (note50 > 0) {
+                document.write("<br>");
+                document.write("₹50 : " + note50);
+            }
+
+            if (note20 > 0) {
+                document.write("<br>");
+                document.write("₹20 : " + note20);
+            }
+
+            if (note10 > 0) {
+                document.write("<br>");
+                document.write("₹10 : " + note10);
+            }
+
+            if (note5 > 0) {
+                document.write("<br>");
+                document.write("₹5 : " + note5);
+            }
+
+            if (note2 > 0) {
+                document.write("<br>");
+                document.write("₹2 : " + note2);
+            }
+
+            if (note1 > 0) {
+                document.write("<br>");
+                document.write("₹1 : " + note1);
+            }
+
+        } else if (billingAmount > customerPaidAmount) {
+            let collectAmount = billingAmount - customerPaidAmount;
+            document.write("Collect remaining amount from customer : " + collectAmount);
+        } else {
+            document.write("Thanks for visiting.😊");
+        }
+    </script>
+</body>
+
+</html>

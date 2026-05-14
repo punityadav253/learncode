@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquamorphic Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* Aqua Gradient Background */
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            overflow: hidden;
+        }
+
+        /* Floating blur circles */
+        body::before,
+        body::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+        }
+
+        body::before {
+            width: 300px;
+            height: 300px;
+            background: rgba(0, 255, 255, 0.5);
+            top: -80px;
+            left: -80px;
+        }
+
+        body::after {
+            width: 350px;
+            height: 350px;
+            background: rgba(255, 255, 255, 0.3);
+            bottom: -100px;
+            right: -100px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            width: 400px;
+            padding: 25px;
+
+            /* Glass / Aquamorphic Effect */
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255, 255, 255, 0.3);
+
+            box-shadow:
+                0 8px 32px rgba(0, 0, 0, 0.2),
+                inset 0 0 10px rgba(255, 255, 255, 0.2);
+
+            color: white;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+
+            backdrop-filter: blur(5px);
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .sub {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .sub input {
+            width: 120px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.4s;
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .sub input:hover {
+            transform: scale(1.1);
+            background: white;
+            color: #0072ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="">
+            <h2>Get in Touch</h2>
+
+            <div class="row">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+            </div>
+
+            <div class="row">
+                <input type="email" placeholder="E-mail">
+                <input type="text" placeholder="Phone">
+            </div>
+
+            <div class="row">
+                <input type="text" placeholder="Address">
+            </div>
+
+            <div class="row">
+                <textarea cols="30" rows="4" placeholder="Your Message"></textarea>
+            </div>
+
+            <div class="sub">
+                <input type="submit" value="Submit">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            background-color: rgb(238, 255, 0);
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+        } 
+        .box2{
+            background-color: rgb(255, 0, 174);
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            z-index: 2;
+        } 
+        .box3{
+            background-color: rgb(0, 255, 21);
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            position: absolute;
+            top: 150px;
+            left: 150px;
+            z-index: 3;
+        } 
+        .box4{
+            background-color: rgb(212, 177, 2);
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            z-index: 4;
+        } 
+        .box5{
+            background-color: rgb(255, 0, 0);
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            position: absolute;
+            top: 250px;
+            left: 250px;
+            z-index: 5;
+        } 
+        .box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover{
+            z-index: 6;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+</body>
+</html>
