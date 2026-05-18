@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+            display: flex;
+        }
+    </style>
+
+    <script>
+        function add() {
+            let num1 = parseInt(document.getElementById('firstnum').value);
+            let num2 = parseInt(document.getElementById('secondnum').value);
+            result = num1 + num2;
+            document.getElementById('resultof').value = result;
+        }
+        function sub() {
+            let num1 = parseInt(document.getElementById('firstnum').value);
+            let num2 = parseInt(document.getElementById('secondnum').value);
+            result = num1 - num2;
+            document.getElementById('resultof').value = result;
+        }
+        function multi() {
+            let num1 = parseInt(document.getElementById('firstnum').value);
+            let num2 = parseInt(document.getElementById('secondnum').value);
+            result = num1 * num2;
+            document.getElementById('resultof').value = result;
+        }
+        function div() {
+            let num1 = parseInt(document.getElementById('firstnum').value);
+            let num2 = parseInt(document.getElementById('secondnum').value);
+            result = num1 / num2;
+            document.getElementById('resultof').value = result;
+        }
+        function mod() {
+            let num1 = parseInt(document.getElementById('firstnum').value);
+            let num2 = parseInt(document.getElementById('secondnum').value);
+            result = num1 % num2;
+            document.getElementById('resultof').value = result;
+        }
+    </script>
+</head>
+
+<body>
+    <div>First number: <input type="text" name="" id="firstnum"></div>
+    <div>Second number: <input type="text" name="" id="secondnum"></div>
+    <div class="button">
+        <div><button onclick="add()">Add</button></div>
+        <div><button onclick="sub()">Substract</button></div>
+        <div><button onclick="multi()">Multiply</button></div>
+        <div><button onclick="div()">Divide</button></div>
+        <div><button onclick="mod()">Modulus</button></div>
+    </div>
+    <div>Result: <input type="text" name="" id="resultof"></div>
+</body>
+
+</html>

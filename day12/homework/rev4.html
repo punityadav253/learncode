@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let data = parseInt(prompt("Enter a number to sum of its digits :"));
+        document.write(data);
+        let sum = 0;
+        while (data > 0) {
+            rem = data % 10;
+            data = parseInt(data / 10);
+            sum = sum + rem;
+        }
+        document.write("<br>");
+        document.write(sum);
+    </script>
+</body>
+
+</html>

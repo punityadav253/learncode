@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+            display: flex;
+        }
+    </style>
+    <script>
+        function add() {
+            let num1 = parseInt(document.getElementById("fnum").value);
+            let num2 = parseInt(document.getElementById("snum").value);
+            let result = num1 + num2;
+            document.getElementById("resu").value = result;
+        }
+        function sub() {
+            let num1 = parseInt(document.getElementById("fnum").value);
+            let num2 = parseInt(document.getElementById("snum").value);
+            let result = num1 - num2;
+            document.getElementById("resu").value = result;
+        }
+        function mul() {
+            let num1 = parseInt(document.getElementById("fnum").value);
+            let num2 = parseInt(document.getElementById("snum").value);
+            let result = num1 * num2;
+            document.getElementById("resu").value = result;
+        }
+        function div() {
+            let num1 = parseInt(document.getElementById("fnum").value);
+            let num2 = parseInt(document.getElementById("snum").value);
+            let result = num1 / num2;
+            document.getElementById("resu").value = result;
+        }
+        function mod() {
+            let num1 = parseInt(document.getElementById("fnum").value);
+            let num2 = parseInt(document.getElementById("snum").value);
+            let result = num1 % num2;
+            document.getElementById("resu").value = result;
+        }
+    </script>
+</head>
+
+<body>
+    <div>First number : <input type="text" name="" id="fnum"></div>
+    <div>Second number : <input type="text" name="" id="snum"></div>
+    <div class="button">
+        <div><button onclick="add()">Sum</button></div>
+        <div><button onclick="sub()">Sub</button></div>
+        <div><button onclick="mul()">Multiply</button></div>
+        <div><button onclick="div()">Divide</button></div>
+        <div><button onclick="mod()">Mod</button></div>
+    </div>
+    <div>Result : <input type="text" name="" id="resu"></div>
+</body>
+
+</html>
